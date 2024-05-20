@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #252525;
+  font-size: 15px;
+  line-height: 28px;
+}
+.w-3 {
+  border: 0px solid #b8b8b8;
+  margin-bottom: 0px;
+  min-height: 100vh;
+  background: #fff;
+}
+.w-3 {
+  width: 440px;
+}
+.fullpage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #000000;
+  min-height: 100vh;
+  align-items: center;
+}
+.w-100 {
+  width: 100%;
+}
+.delete-container {
+  padding: 0 20px;
+}
+.payoption input {
+  display: none;
+}
+input {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.payoption label {
+  width: 100%;
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 16px 0;
+  cursor: pointer;
+  color: #3a4865;
+}
+.payoption label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding-left: 35px;
+}
+.payoption label::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #b8b8b8;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+bottom: 0;
+margin: auto;
+}
+.payoption input[type="radio"]:checked + label::before {
+  background: #000000;
+  border-color: #000000;
+}
+.delete-title {
+  background: transparent;
+  padding: 20px 0;
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+}
+.payoption textarea {
+  width: 100%;
+  border: 1px solid #f1f1f1;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #252525;
+}
+.submitBtn {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+.submitBtn button {
+  border: 1px solid #f1f1f1;
+  background: transparent;
+  padding: 12px 5px;
+  font-size: 18px;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.submitBtn button.submitpay {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+.deleteSuc {
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  /*text-transform: capitalize;*/
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-shadow: 0 4px 5px #000;
+  margin-top: 15px;
+}
+.delete-modal {
+  text-align: center;
+}
+
+
+@media (max-width: 766px) {
+  .w-3 {
+  width: 100%;
+}
+.deleteSuc {
+  font-size: 14px;
+}
+
+}

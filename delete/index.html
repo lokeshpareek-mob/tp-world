@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Delete</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="fullpage">
+<div class="delete-container w-3">
+	<h2 class="delete-title">Delete Account</h2>
+	<div class="w-100 payoption" style="">
+			<!-- <form> -->
+			<div class="w-100">
+				<input class="anotherRadio" type="radio" id="paytm" name="pay">
+				<label for="paytm"> No longer playing</label>
+			</div>
+
+			<div class="w-100">
+				<input class="anotherRadio" type="radio" id="phonepe" name="pay">
+				<label for="phonepe">Privacy Concerns</label>
+			</div>
+
+			<div class="w-100">
+				<input class="anotherRadio" type="radio" id="googlepay" name="pay">
+				<label for="googlepay">Unsatisfied with experience</label>
+			</div>
+
+			<div class="w-100">
+				<input class="anotherRadio" type="radio" id="mobikwik" name="pay">
+				<label for="mobikwik">Technical issues</label>
+			</div>
+
+			<div class="w-100 otherClick">
+				<input type="radio" id="otherupi" name="pay">
+				<label for="otherupi" style="border:0;">Other</label>
+			</div>
+			<div class="w-100 otherReason" style="display: none;">
+				<textarea placeholder="Please mention reason"></textarea>
+			</div>
+			<div class="w-100 submitBtn">
+				<button class=" w-100">Cancel</button>
+				<button class="submitpay w-100">Submit</button>
+			</div>
+			<!-- </form> -->
+
+		</div>
+</div>
+
+<div class="delete-modal" style="display:none;">
+	<img src="img/check.png" width="120" />
+	<div class="w-100">
+		<p class="deleteSuc">Request submitted</p>
+	</div>
+</div>
+
+
+</div>
+
+<script>
+    var other = document.querySelector('.otherClick');
+    var otherCheck = other.querySelector('input[type="radio"]');
+    var box = document.querySelector('.otherReason');
+    var anotherRadios = document.querySelectorAll('.anotherRadio');
+    anotherRadios.forEach(function(radio) {
+        radio.addEventListener('change', handleRadioClick);
+    });
+
+    function handleRadioClick() {
+        if (otherCheck.checked) {
+            box.style.display = 'block';
+        } else {
+            box.style.display = 'none';
+        }
+    }
+
+    otherCheck.addEventListener('change', handleRadioClick);
+
+    var submit = document.querySelector('.submitpay');
+    submit.addEventListener('click', function(){
+    	document.querySelector('.delete-container').style.display = 'none';
+    	document.querySelector('.delete-modal').style.display = 'block';
+    });
+</script>
+
+
+
+
+</body>
+</html>
